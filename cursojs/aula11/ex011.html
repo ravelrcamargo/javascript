@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    qual o seu pais: <input type="text" name="pais" id="pais">
+
+    <input type="button" value="Resultado" onclick="resultado()">
+
+    <div id="res">
+
+    </div>
+    <script>
+        function resultado(){
+            var nacio = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var nacio2 = String(nacio.value)
+
+            res.innerHTML = `<p>Seu país é ${nacio2}</p> `
+        
+        if (nacio2 == 'brasil'){
+            res.innerHTML += `<p>brasileiro</p>`
+        }else{
+            res.innerText += `estrangeiro`}
+
+            res.innerHTML += `<p>Seja bem vindo meu nobre</p>`
+    }
+    
+    </script>
+    
+</body>
+</html>
